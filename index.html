@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add any additional CSS styles here if needed */
+    </style>
+</head>
+<body>
+<div class="container mx-auto">
+    <main id="form">
+        <div class="form-content flex justify-between p-5 rounded-2xl" id="form-content">
+            <div class="form-input-text p-10 pr-1 justify-center">
+                <div class="input-text-header mb-5">
+                    <h1 class="text-5xl font-extrabold mb-5">Stay updated!</h1>
+                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                </div>
+                <ul class="input-text-list mb-5 flex flex-col gap-2">
+                    <li><img src="images/icon-list.svg" alt="">Product discovery and building what matters</li>
+                    <li><img src="images/icon-list.svg" alt="">Measure to ensure updates are success</li>
+                    <li><img src="images/icon-list.svg" alt="">And much more!</li>
+                </ul>
+                <div class="input-input-button">
+                    <div class="input-email mb-5 flex flex-col">
+                        <h2 class="font-bold text-xs">Email address</h2>
+                        <input id="emailInput" class="mt-2 border-2 border-gray-200 rounded-md p-3" type="text" placeholder="email@compa.com">
+                        <p id="validationMessage" class="text-sm text-red-500"></p>
+                    </div>
+                    <div class="input-submit text-center bg-gray-800 rounded-md p-3 text-white">
+                        <input class="cursor-pointer font-md" name="submit" type="submit" value="Subscribe to monthly newsletter">
+                    </div>
+                </div>
+            </div>
+            <div class="form-image flex justify-center">
+                <img src="images/illustration-sign-up-desktop.svg" alt="">
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const emailInput = document.getElementById("emailInput");
+        const validationMessage = document.getElementById("validationMessage");
+
+        emailInput.addEventListener("input", function () {
+            const email = emailInput.value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email === "") {
+                // Empty input
+                emailInput.style.borderColor = "initial";
+                validationMessage.textContent = "";
+            } else if (emailPattern.test(email)) {
+                // Valid email
+                emailInput.style.borderColor = "green"; // Change border color to green
+                validationMessage.textContent = "It's a valid email";
+                validationMessage.style.color = "green";
+            } else {
+                // Invalid email
+                emailInput.style.borderColor = "red"; // Change border color to red
+                validationMessage.textContent = "Invalid email format";
+                validationMessage.style.color = "red";
+            }
+        });
+    });
+</script>
+</body>
+</html>

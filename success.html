@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Mono&display=swap');
+
+
+body{
+    margin: unset;
+    padding: unset;
+    height: 100vh;
+    font-size: 1.25rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(235, 18%, 26%);
+
+}
+
+.container{
+    font-size: .9rem;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+.modal-content{
+    background-color: #fff;
+    width: 350px;
+}
+
+.modal .modal-header img{
+    width: 36px;
+}
+
+p{
+    font-size: 11px;
+    line-height: 1.5;
+}
+  </style>
+</head>
+<body>
+<div class="container mx-auto">
+
+
+
+<div class="modal">
+    <div class="modal-content flex flex-col justify-center p-8 pt-6 rounded-2xl">
+        <div class="modal-header">
+            <img src="images/icon-success.svg" alt="">
+            <h1 class="font-extrabold text-4xl my-5 mb-3">Thanks for subscribing!</h1>
+        </div>
+        <div class="modal-body flex flex-col gap-5">
+            <p class="pr-2">A confirmation email has been sent to <strong>doms@loremcompany.com.</strong> Please open it and click the button inside to confirm your subscription.</p>
+            <input class="bg-gray-800 p-3 text-white rounded cursor-pointer" type="submit" value="Dismiss message">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
